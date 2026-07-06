@@ -1,32 +1,24 @@
-﻿print("=" * 50)
-print("        BioVerse OS Studio v0.1")
-print("=" * 50)
+﻿from generator.project import create_project
 
-print("""
-1. Create Desktop
-2. Create Launcher
-3. Create Dock
-4. Create File Manager
-5. Build ISO
-6. Exit
-""")
+def menu():
+    while True:
+        print("\n" + "="*60)
+        print("           BioVerse Studio v1.0")
+        print("="*60)
 
-choice = input("Select an option: ")
+        print("1. Create BioVerse OS Project")
+        print("2. Exit")
 
-if choice == "1":
-    print("Desktop module will be created in the next version.")
+        choice = input("\nSelect: ")
 
-elif choice == "2":
-    print("Launcher module will be created in the next version.")
+        if choice == "1":
+            create_project()
 
-elif choice == "3":
-    print("Dock module will be created in the next version.")
+        elif choice == "2":
+            break
 
-elif choice == "4":
-    print("File Manager module will be created in the next version.")
+        else:
+            print("Invalid choice")
 
-elif choice == "5":
-    print("ISO Builder will be created in the next version.")
-
-else:
-    print("Goodbye!")
+if __name__ == "__main__":
+    menu()
